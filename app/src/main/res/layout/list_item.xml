@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!-- Layout for a single list item -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/list_item_height"
-    android:minHeight="@dimen/list_item_height">
+    android:background="@color/tan_background"
+    android:orientation="horizontal">
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="@dimen/list_item_height"
-        android:layout_height="@dimen/list_item_height"
-        android:background="@color/tan_background" />
+        android:layout_height="@dimen/list_item_height" />
 
     <LinearLayout
         android:id="@+id/position_for_words"
@@ -26,25 +27,34 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:gravity="bottom"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            tools:text="lutti" />
 
         <TextView
             android:id="@+id/default_language_version"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:gravity="top"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="#FFFFFF" />
-
+            android:textColor="@android:color/white"
+            tools:text="one" />
     </LinearLayout>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/ic_play_arrow_black_24dp"
-        android:tint="#FFFFFF" />
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_play_arrow_black_24dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground" />
 
 </RelativeLayout>
